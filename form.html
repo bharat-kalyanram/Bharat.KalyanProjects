@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+
+  <style>
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+      background-color: #d5d2d2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #FFFFFF;
+      width: 64%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .title {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      text-decoration: underline;
+      font-weight: bold;
+      color: #0004ff;
+    }
+
+    form {
+      background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+      border-style: dashed;
+      padding: 12px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      resize: vertical;
+    }
+
+    input[type=radio],
+    input.radio {
+      float: left;
+      clear: none;
+      margin: 10px 10px 10px 2px;
+    }
+
+    input[type=checkbox],
+    input.checkbox {
+      float: left;
+      clear: none;
+      margin: 10px 10px 10px 2px;
+    }
+
+    input[type=radio],
+    input.radio {
+      float: left;
+      clear: none;
+      margin: 10px 10px 10px 2px;
+    }
+
+    input[type=checkbox],
+    input.checkbox {
+      float: left;
+      clear: none;
+      margin: 10px 10px 10px 2px;
+    }
+
+    input[type=date] {
+      width: 40%;
+      float: left;
+      margin: 10px 10px 10px 0;
+    }
+
+    input[type=submit],
+    input[type=reset] {
+      padding: 6px 30px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 1px;
+    }
+
+    label {
+      color: #FFFFFF;
+      padding: 10px 10px 10px 0;
+      display: inline-block;
+    }
+
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 8px;
+    }
+
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 8px;
+    }
+
+    .col-40 {
+      float: left;
+      width: 40%;
+      margin-top: 8px;
+    }
+
+    .col-35 {
+      float: left;
+      width: 35%;
+      margin-top: 8px;
+      color: #FFFFFF;
+      padding: 10px 10px 10px 0;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+      .col-25,
+      .col-40,
+      .col-35,
+      .col-75,
+      input[type=submit],
+      input[type=reset] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="title">Student Registration Form</h2>
+
+  <form action="action.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-40"><input type="text" id="fname" name="fname" placeholder="Ghanendra" maxlength="50"></div>
+      <div class="col-35 label">&nbsp;(Max 50 Characters Allowed)</div>
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-40"><input type="text" id="lname" name="lname" placeholder="Yadav" maxlength="50"></div>
+      <div class="col-35">&nbsp;(Max 50 Characters Allowed)</div>
+      <div class="col-25">
+        <label for="email">Email ID</label>
+      </div>
+      <div class="col-40"><input type="text" id="email" name="email" placeholder="yghanendra@gmail.com"
+          maxlength="50"><br></div>
+      <div class="col-35">&nbsp;</div>
+      <div class="col-25">
+        <label for="mob">Mobile Number</label>
+      </div>
+      <div class="col-40"><input type="tel" id="mob" name="mob" placeholder="7842xxxxxx" pattern="[0-9]{10}"></div>
+      <div class="col-35">&nbsp;(10 Digits Allowed)</div>
+      <div class="col-25">
+        <label>Gender</label>
+      </div>
+      <div class="col-40">
+        <div style="float:left;"> <input type="radio" class="radio" name="gender" value="Male"><label
+            for="male">Male</label></div>
+        <div style="float:left;"><input type="radio" id="gender" name="gender" value="Female"><label
+            for="female">Female</label></div>
+      </div>
+      <div class="col-35">&nbsp;</div>
+      <div class="col-25">
+        <label for="dob">Date of Birth(DOB)</label>
+      </div>
+      <div class="col-75"><input type="date" id="dob" name="dob"></div>
+      <div class="col-25" style="margin-bottom: 3px;">
+        <label for="add" style="padding-top: 100px;">Address</label>
+      </div>
+      <div class="col-75" style="margin-bottom: 3px;"><textarea name="add" id="add" cols="40" rows="14"
+          style="width: 75%;"></textarea></div>
+      <div class="col-25">
+        <label for="city">City</label>
+      </div>
+      <div class="col-40"><input type="text" id="city" name="city" placeholder="Bangalore" maxlength="50"></div>
+      <div class="col-35">&nbsp;(Max 50 Characters Allowed)</div>
+      <div class="col-25">
+        <label for="pin">Pincode</label>
+      </div>
+      <div class="col-40"><input type="text" id="pin" name="pin" placeholder="560068" pattern="[0-9]{6}"></div>
+      <div class="col-35">&nbsp;(Max 6 Numbers Allowed)</div>
+      <div class="col-25">
+        <label for="state">State</label>
+      </div>
+      <div class="col-40"><input type="text" id="state" name="state" placeholder="Karnataka" maxlength="50"></div>
+      <div class="col-35">&nbsp;(Max 50 Characters Allowed)</div>
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-40"><input type="text" id="country" name="country" placeholder="India"></div>
+      <div class="col-35">&nbsp;</div>
+      <div class="col-25">
+        <label>Hobbies</label>
+      </div>
+      <div class="col-75">
+        <div style="float:left;"> <input type="checkbox" id="draw" name="draw" value="Draw"><label
+            for="draw">Drawing</label></div>
+        <div style="float:left;"> <input type="checkbox" id="sing" name="sing" value="sing"><label
+            for="sing">Singing</label></div>
+        <div style="float:left;"> <input type="checkbox" id="dance" name="dance" value="dance"><label
+            for="dance">Dancing</label></div>
+        <div style="float:left;"> <input type="checkbox" id="sketch" name="sketch" value="sketch"><label
+            for="sketch">Sketching</label></div>
+      </div>
+      <div class="col-25">&nbsp;</div>
+      <div class="col-75"><input type="checkbox" id="other" name="other" value="other"><label for="other">Others</label>
+        <input type="text" disabled id="others" name="others" placeholder="Ex- Teaching"
+          style="width: 40%;"><label>&nbsp;(Max 50
+          Characters Allowed)</label>
+      </div>
+      <div class="col-25">
+        <label>Qualification</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" id="10th" name="10th" value="10th">
+        <label for="10th"> High School(10th)</label><br>
+        <input type="checkbox" id="12th" name="12th" value="12th">
+        <label for="12th"> Higher School(12th)</label><br>
+        <input type="checkbox" id="grad" name="grad" value="grad">
+        <label for="grad"> Graduation(Bachelors)</label><br>
+        <input type="checkbox" id="pgrad" name="pgrad" value="pgrad">
+        <label for="pgrad"> Post Graduation(Masters)</label><br>
+        <input type="checkbox" id="phd" name="phd" value="phd">
+        <label for="phd"> PhD</label><br>
+      </div>
+      <div class="col-25">
+        <label>Courses<br> Applied for</label>
+      </div>
+      <div class="col-75">
+        <input type="radio" class="radio" name="course" value="bca"><label for="bca">BCA(Bachelor of Computer
+          Applications)</label><br>
+        <input type="radio" class="radio" name="course" value="bcom"><label for="bcom">B.Com(Bachelor of
+          Commerce)</label><br>
+        <input type="radio" class="radio" name="course" value="bsc"><label for="bsc">B.Sc(Bachelor of
+          Science)</label><br>
+        <input type="radio" class="radio" name="course" value="ba"><label for="ba">BA(Bachelor of Arts)</label><br>
+        <input type="radio" class="radio" name="course" value="mca"><label for="mca">MCA(Master of Computer
+          Applications)</label><br>
+        <input type="radio" class="radio" name="course" value="mcom"><label for="mcom">M.Com(Master of
+          Commerce)</label><br>
+        <input type="radio" class="radio" name="course" value="msc"><label for="msc">M.Sc(Master of Science)</label><br>
+        <input type="radio" class="radio" name="course" value="ma"><label for="ma">MA(Master of Arts)</label><br>
+      </div>
+    </div>
+    <br>
+    <div class="row" style="text-align: center;">
+      <input id='sub' type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+  <script>
+    const fname = document.getElementById('fname');
+    const lname = document.getElementById('lname');
+    const email = document.getElementById('email');
+    const mob = document.getElementById('mob');
+    const city = document.getElementById('city');
+    const pin = document.getElementById('pin');
+    const state = document.getElementById('state');
+    const country = document.getElementById('country');
+
+    fname.addEventListener('blur', () => {
+      let regex = /^([a-zA-Z]){0,50}$/;
+      let str = fname.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your fname is valid');
+      }
+      else {
+        alert("First Name invalid");
+        console.log('Your fname is invalid');
+      }
+
+    });
+    lname.addEventListener('blur', () => {
+      console.log("lname is blurred");
+      // Validate name here
+      let regex = /^([a-zA-Z]){0,50}$/;
+      let str = lname.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your lname is valid');
+      }
+      else {
+        console.log('Your lname is invalid');
+        alert("Last Name invalid");
+      }
+    });
+    email.addEventListener('blur', () => {
+      let regex = /^([0-9a-zA-Z]+)@([0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+      let str = email.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your email is valid');
+      }
+      else if(str=' ') {console.log('Your email is not valid');}
+      else {
+        console.log('Your email is not valid');
+        alert("Email ID invalid");
+      }
+    });
+
+    mob.addEventListener('blur', () => {
+      let regex = /^([0-9]){0,10}$/;
+      let str = mob.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your mob is valid');
+      }
+      else {
+        console.log('Your mob is not valid');
+        alert("Mobile Number invalid");
+      }
+    });
+
+    city.addEventListener('blur', () => {
+      let regex = /^([a-zA-Z]){0,50}$/;
+      let str = city.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your city is valid');
+      }
+      else {
+        console.log('Your city is invalid');
+        alert("City invalid");
+      }
+    });
+
+    pin.addEventListener('blur', () => {
+      let regex = /^([0-9]){0,6}$/;
+      let str = pin.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your pin is valid');
+      }
+      else {
+        console.log('Your pin is not valid');
+        alert("Pin invalid");
+      }
+    });
+
+    state.addEventListener('blur', () => {
+      let regex = /^([a-zA-Z]){0,50}$/;
+      let str = state.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your state is valid');
+      }
+      else {
+        console.log('Your state is invalid');
+        alert("State invalid");
+      }
+    });
+    const other = document.getElementById('other');
+    other.addEventListener('click', myFunc);
+    function myFunc() {
+      if (other.checked) {
+        document.getElementById('others').disabled = false;
+      }
+      else {
+        document.getElementById('others').value = '';
+        document.getElementById('others').disabled = true;
+      }
+    }
+
+    const others = document.getElementById('others');
+    others.addEventListener('blur', () => {
+      let regex = /^([a-zA-Z]){0,50}$/;
+      let str = others.value;
+      console.log(regex, str);
+      if (regex.test(str)) {
+        console.log('Your hobby is valid');
+      }
+      else {
+        console.log('Your hobby is invalid');
+        alert("Hobby invalid");
+      }
+    });
+  </script>
+</body>
+
+</html>

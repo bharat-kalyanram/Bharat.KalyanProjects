@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <div class="output">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand"></div>
+            </div>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <button data-all-clear style="width: 225px;">AC</button>
+                    </td>
+                    <td><button data-delete class="gray">DEL</button></td>
+                    <td><button class="pink" data-operation>÷</button></td>
+                </tr>
+                <tr>
+                    <td><button data-number class="black">1</button></td>
+                    <td><button data-number class="black">2</button></td>
+                    <td><button data-number class="black">3</button></td>
+                    <td><button data-operation class="pink">*</button></td>
+                </tr>
+                <tr>
+                    <td><button data-number class="black">4</button></td>
+                    <td><button data-number class="black">5</button></td>
+                    <td><button data-number class="black">6</button></td>
+                    <td><button data-operation class="pink">+</button></td>
+                </tr>
+                <tr>
+                    <td><button data-number class="black">7</button></td>
+                    <td><button data-number class="black">8</button></td>
+                    <td><button data-number class="black">9</button></td>
+                    <td><button data-operation class="pink">-</button></td>
+                </tr>
+                <tr>
+                    <td><button data-number class="black">.</button></td>
+                    <td><button data-number class="black">0</button></td>
+                    <td colspan="2"><button data-equals class="orange" style="width: 222px;">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="calc.js"></script>
+
+</html>
